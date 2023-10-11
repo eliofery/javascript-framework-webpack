@@ -1,0 +1,14 @@
+{
+  "name": "javascript-framework-webpack",
+  "version": "0.0.1",
+  "description": "JavaScript framework для создания spa приложений.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "",
+  "license": "ISC"
+}
