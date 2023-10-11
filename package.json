@@ -1,6 +1,6 @@
 {
   "name": "javascript-framework-webpack",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JavaScript framework для создания spa приложений.",
   "main": "index.js",
   "scripts": {
@@ -10,5 +10,11 @@
     "webpack"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/register": "^7.22.15",
+    "core-js": "^3.33.0"
+  }
 }
