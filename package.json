@@ -1,6 +1,6 @@
 {
   "name": "javascript-framework-webpack",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "JavaScript framework для создания spa приложений.",
   "keywords": [
     "webpack",
@@ -10,7 +10,9 @@
   ],
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "develop": "cross-env NODE_ENV=development webpack serve --config webpack/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.prod.js"
   },
   "browserslist": [
     "last 2 version",
