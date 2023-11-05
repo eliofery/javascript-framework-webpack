@@ -66,3 +66,14 @@ img {
 .active {
   color: red;
 }
+
+.link {
+  display: inline-flex;
+  padding: 20px;
+
+  color: white;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
