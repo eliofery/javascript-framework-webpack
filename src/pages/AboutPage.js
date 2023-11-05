@@ -1,4 +1,6 @@
 import BasePage from '@/core/BasePage' // базовая страница
+import store from '@/store'
+import { REFRESH_BIDS, refreshBids } from '@/reducers/bidsReducer' // хранилище состояний
 
 /**
  * Страница о нас
@@ -16,6 +18,15 @@ export default class AboutPage extends BasePage {
     this._init()
   }
 
+  async _beforeInit() {
+    store.subscribe(REFRESH_BIDS, () => {
+      // eslint-disable-next-line
+      alert('Подписка на REFRESH_BIDS запустилась')
+      // Здесь происходит какая то логика.
+      // Данный колбэк сработает при вызове редьюсера у которого параметр type будет равен REFRESH_BIDS.
+    })
+  }
+
   /**
    * Разметка страницы
    *
@@ -24,8 +35,9 @@ export default class AboutPage extends BasePage {
    */
   get _template() {
     return `
-        <div>
-          Создание самописного framework на нативном JavaScript с использованием Webpack.
+        <div class="container">
+          <p data-el="text">Создание самописного framework на нативном JavaScript с использованием Webpack.</p>
+          <p>Нажми на первый параграф</p>
         </div>
       `
   }
@@ -35,5 +47,11 @@ export default class AboutPage extends BasePage {
    *
    * @protected
    */
-  _initListeners() {}
+  _initListeners() {
+    this._elements.text.addEventListener('click', () => {
+      const data = [1, 2, 3, 4, 5]
+
+      store.dispatch(refreshBids(data))
+    })
+  }
 }

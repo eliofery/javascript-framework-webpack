@@ -24,7 +24,7 @@ export default class ErrorPage extends BasePage {
    */
   get _template() {
     return `
-        <div>
+        <div class="container">
           Страница не найдена 404.
         </div>
       `
