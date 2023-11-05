@@ -1,0 +1,24 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-header {
+  margin-bottom: 20px;
+
+  color: #fff;
+
+  background-color: #000;
+}
+
+.main-layout main {
+  flex-grow: 1;
+}
+
+.main-footer {
+  margin-top: 20px;
+  padding: 20px 0;
+
+  background-color: #c2c2c2;
+}
