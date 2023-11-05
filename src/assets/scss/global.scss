@@ -1,0 +1,68 @@
+@import "variable";
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+
+  min-width: 380px;
+  margin: 0;
+
+  color: $color-black;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: $color-grey;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#app {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sr-only {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+}
+
+.active {
+  color: red;
+}
