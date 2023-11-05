@@ -1,5 +1,8 @@
 import BasePage from '@/core/BasePage' // базовая страница
 import LogoComponent from '@/components/LogoComponent' // логотип
+// import ProductService from '@/services/ProductService' // получение продуктов
+
+// const { addProducts, loadProducts } = ProductService
 
 // Подключаемые компоненты
 const components = {
@@ -23,6 +26,11 @@ export default class HomePage extends BasePage {
 
     // Инициализация главной страницы
     this._init()
+  }
+
+  async _afterInit() {
+    // const products = await loadProducts()
+    // const res = await addProducts(JSON.stringify({ name: 'Product new', type: 'discount' }))
   }
 
   /**
@@ -50,6 +58,6 @@ export default class HomePage extends BasePage {
    */
   _initListeners() {
     // eslint-disable-next-line
-    this._elements['btn'].addEventListener('click', () => console.log('Клик по кнопке'))
+    this._elements['btn'].addEventListener('click', () => alert('Клик по кнопке'))
   }
 }

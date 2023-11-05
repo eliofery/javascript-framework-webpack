@@ -1,6 +1,6 @@
 {
   "name": "javascript-framework-webpack",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "JavaScript framework для создания spa приложений.",
   "keywords": [
     "webpack",
